@@ -17,9 +17,9 @@ void quick_sort(int *array, size_t size)
 }
 
 /**
- * Lomuto_part - Lomuto partition scheme (Pivot last element)
+ * lomuto_part - Lomuto partition scheme (Pivot last element)
  * @array: array
- * @Left: starting index of the array
+ * @left: starting index of the array
  * @right: ending index of the array
  * @size: Size of array
  *
@@ -27,7 +27,8 @@ void quick_sort(int *array, size_t size)
  */
 int lomuto_part(int *array, int left, int right, size_t size)
 {
-	int i = left - 1, j = left;
+	int i = left - 1;
+	int j = left;
 	int pivot = array[right], aux = 0;
 
 	for (; j < right; j++)
